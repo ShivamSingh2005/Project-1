@@ -99,7 +99,19 @@ async def table_details(table_name : str):
     Terminal: uvicorn main:app --reload
     Go to: http://127.0.0.1:8000/list_tables
     Output:
-
+    {
+        "table_name": "DISCOUNT RATE",
+        "row_names": [
+            "Approach(1:Direct;2:CAPM)=",
+            "1. Discount rate =",
+            "2a. Beta",
+            " b. Riskless rate=",
+            " c. Market risk premium =",
+            " d. Debt Ratio =",
+            " e. Cost of Borrowing =",
+            "Discount rate used="
+        ]
+    }
     """
     try:
         table_det = {}
@@ -113,8 +125,40 @@ async def table_details(table_name : str):
 @app.get("/row_sum/{table_name}/{row_name}")
 async def row_sum(table_name: str, row_name: str):
     """
-    
+    Calculates the sum of a row.
+
+    Parameters
+    ----------
+    table_name: str
+        The name of the table
+    row_name: str
+        The name of the row
+
+    Returns
+    -------
+    dict
+        The dictionary containing table name, row name and the sum of the values int that row.
+
+    Raises
+    ------
+    Invalid Table Name
+        If Table Name not found in capbudg.xls
+
+    Invalid Row Name
+        If Row name not found in the table but table namee is valid.
+
+    Examples
+    --------
+    Terminal: uvicorn main:app --reload
+    Go to: http://127.0.0.1:8000/row_sum/INITIAL%20INVESTMENT/Initial%20Investment=
+    Output:
+    {
+        "table_name": "INITIAL INVESTMENT",
+        "row_name": "Initial Investment=",
+        "sum": 50000
+    }
     """
+
     row_sum = {}
     row_sum['table_name']=table_name
     row_sum['row_name']=row_name
