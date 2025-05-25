@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
-import uvicorn
+
 #Read the file
 df = pd.read_excel("./Data/capbudg.xls")
 
