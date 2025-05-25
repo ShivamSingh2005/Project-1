@@ -125,7 +125,7 @@ async def table_details(table_name : str):
 @app.get("/row_sum/{table_name}/{row_name}")
 async def row_sum(table_name: str, row_name: str):
     """
-    Calculates the sum of a row.
+    Calculates the sum of all the numbers row.
 
     Parameters
     ----------
