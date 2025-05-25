@@ -81,18 +81,18 @@ Please complete the following sections with your thoughts on the assignment.
 
 ### Potential Improvements
 
-*(Describe any ideas you have on how this application or assignment could be improved or extended. For example, handling different Excel formats, more advanced data operations, UI integration, etc.)*
+This API can be used for data analysis if more functions are added to it and some visualization tools are integrated.
 
 ### Missed Edge Cases
 
-*(Identify any edge cases or scenarios that your current implementation might not handle or that were not explicitly covered in the requirements. For example, empty Excel files, tables with no numerical data, malformed table names, etc.)*
+The API could not handle if some other data type except int or float is used in the table.
 
 ## Testing
 
 To help us quickly test your application, please provide a Postman collection JSON.
 
 * **Base URL:** `http://localhost:9090` and the given endpoint names.
-* **Postman Collection:**
+* **Postman Collection: [Project 1 Postman Collection](https://www.postman.com/avionics-explorer-4170053/project-1/documentation/c9ahlru/project-1)**
 
 ## Deadline
 
