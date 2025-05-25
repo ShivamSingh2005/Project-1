@@ -1,12 +1,12 @@
-#Importing Modules
+#Import Modules
 from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
 import uvicorn
-#Reading the file
+#Read the file
 df = pd.read_excel("./Data/capbudg.xls")
 
-# Parsing Data From capbudg.xls
+# Parse Data From capbudg.xls
 tables = {}
 tables['INITIAL INVESTMENT']=df.iloc[2:9,0:3:2]
 tables['CASHFLOW DETAILS']=df.iloc[2:6,4:7:2]
@@ -178,6 +178,3 @@ async def row_sum(table_name: str, row_name: str):
         return row_sum
     except:
         return {"Invalid Table Name":f"No table with name <{table_name}> found."}
-
-    
-
