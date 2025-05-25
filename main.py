@@ -1,3 +1,11 @@
+'''
+In terminal execute:
+    uvicorn main:app --reload --port 9090 
+to run the API.
+
+Then click on the link given at the end of README.md file to test the API on Postman.
+'''
+
 #Import Modules
 from fastapi import FastAPI
 from pydantic import BaseModel
