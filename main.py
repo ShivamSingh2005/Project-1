@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
-
+import uvicorn
 #Reading the file
 df = pd.read_excel("./Data/capbudg.xls")
 
@@ -54,8 +54,8 @@ async def list_tables():
 
     Example
     -------
-    Terminal: uvicorn main:app --reload
-    Go to: http://127.0.0.1:8000/list_tables
+    Terminal: uvicorn main:app --reload --port 9090
+    Go to: http://127.0.0.1:9090/list_tables
     Output:
     {
         "tables": [
@@ -96,8 +96,8 @@ async def table_details(table_name : str):
 
     Examples
     --------
-    Terminal: uvicorn main:app --reload
-    Go to: http://127.0.0.1:8000/list_tables
+    Terminal: uvicorn main:app --reload --port 9090
+    Go to: http://127.0.0.1:9090/list_tables
     Output:
     {
         "table_name": "DISCOUNT RATE",
@@ -149,8 +149,8 @@ async def row_sum(table_name: str, row_name: str):
 
     Examples
     --------
-    Terminal: uvicorn main:app --reload
-    Go to: http://127.0.0.1:8000/row_sum/INITIAL%20INVESTMENT/Initial%20Investment=
+    Terminal: uvicorn main:app --reload --port 9090
+    Go to: http://127.0.0.1:9090/row_sum/INITIAL%20INVESTMENT/Initial%20Investment=
     Output:
     {
         "table_name": "INITIAL INVESTMENT",
