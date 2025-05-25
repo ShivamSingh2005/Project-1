@@ -91,7 +91,14 @@ The API could not handle if some other data type except int or float is used in 
 
 To help us quickly test your application, please provide a Postman collection JSON.
 
+
+Then click on the link given at the end of README.md file to test the API on Postman.
+
 * **Base URL:** `http://localhost:9090` and the given endpoint names.
+* * In terminal execute:
+    uvicorn main:app --reload --port 9090 
+to run the API.
+
 * **Postman Collection: [Project 1 Postman Collection](https://www.postman.com/avionics-explorer-4170053/project-1/documentation/c9ahlru/project-1)**
 
 ## Deadline
